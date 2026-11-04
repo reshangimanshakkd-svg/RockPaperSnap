@@ -1,56 +1,78 @@
-# Welcome to your Expo app 👋
+RockPaperSnap ✊✋✌️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An interactive Mobile Application built using React Native and Expo Router for the Mobile Application Development module (COST 32152).
 
-## Get started
+📱 Features
 
-1. Install dependencies
+Interactive Game Engine: Play Rock, Paper, Scissors against an automated computer opponent with live scoreboard tracking (Wins, Draws, Losses).
 
-   ```bash
-   npm install
-   ```
+Tab Navigation: File-based navigation using Expo Router with smooth switching between Play Game and Rules tabs.
 
-2. Start the app
+Custom UI & Styling: Styled with React Native Flexbox, dynamic theme color indicators, vector icons, and custom splash screen configuration.
 
-   ```bash
-   npx expo start
-   ```
+📌 Summary
 
-In the output, you'll find options to open the app in a
+🛠️ What I Did
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Created an Expo Router project (RockPaperSnap) and configured custom splash screen settings in app.json.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Implemented core game logic in src/app/(tabs)/index.tsx using useState for choices, dynamic outcomes, and scoreboard counters.
 
-## Get a fresh project
+Built a scrollable rules page in src/app/(tabs)/rules.tsx outlining game winning conditions.
 
-When you're ready, run:
+Set up tab navigation ((tabs)/\_layout.tsx) and root layout (\_layout.tsx) using Expo Router and Ionicons.
 
-```bash
-npm run reset-project
-```
+Configured EAS Build to compile and generate a standalone Android APK.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+💡 What I Learned
 
-### Other setup steps
+React State Management: Handling complex state updates with useState for live UI rendering.
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Expo Router: Building file-based tab and stack navigation structure.
 
-## Learn more
+Advanced Flexbox: Styling responsive layouts, score cards, and interactive weapon buttons in React Native.
 
-To learn more about developing your project with Expo, look at the following resources:
+App Deployment: Managing splash assets and configuring native Android builds via EAS CLI.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+🚀 Getting Started
 
-## Join the community
+Prerequisites
 
-Join our community of developers creating universal apps.
+Node.js installed on your machine.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Expo Go app on your mobile device (for live preview).
+
+Quick Run
+
+# 1. Install dependencies
+
+npm install
+npx expo install @expo/vector-icons
+
+# 2. Start Expo server with clear cache
+
+npx expo start -c
+
+Scan the QR code printed in the terminal using Expo Go (Android) or the default Camera app (iOS).
+
+📦 Project Structure
+
+RockPaperSnap/
+├── assets/images/ # App splash icon (appIcon.png)
+├── src/app/
+│ ├── \_layout.tsx # Root Stack layout
+│ └── (tabs)/
+│ ├── \_layout.tsx # Tab navigation setup
+│ ├── index.tsx # Main Play Screen logic
+│ └── rules.tsx # Game Rules screen
+└── Output_Screens/ # Screenshots for submission
+
+🛠️ Tech Stack
+
+Framework: React Native (Expo Router)
+
+Language: TypeScript / JavaScript
+
+Build Tool: EAS CLI (Android APK)
+
+Icons: @expo/vector-icons (Ionicons)
